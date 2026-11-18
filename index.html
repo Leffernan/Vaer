@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="nn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F3E9">
+  <meta name="description" content="Vêrvarsel frå Yr for Vestnes, Haram, Stordal, Skodje og Ørskog.">
+  <title>Vêrmelding | Bygdebladet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <div class="intro">
+      <h1>Vêr<span>melding</span></h1>
+      <p>Vêrvarsel for det neste døgnet.</p>
+    </div>
+    <div class="forecast-grid">
+      <article class="forecast" data-location="1-189457" data-place="Vestnes">
+        <iframe
+          src="https://www.yr.no/nn/innhald/1-189457/card.html?mode=light"
+          title="Vêrvarsel for Vestnes frå Yr"
+          loading="lazy"
+        ></iframe>
+        <div class="forecast-actions">
+          <button class="long-range" type="button" aria-haspopup="dialog" aria-label="Langtidsvarsel for Vestnes" hidden>
+            Sjå langtidsvarsel <svg class="open-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none">
+              <path d="M17.5 9.5h5v5m0-5-5 5m-3 8h-5v-5m0 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+      <article class="forecast" data-location="1-2412003" data-place="Haram">
+        <iframe
+          src="https://www.yr.no/nn/innhald/1-2412003/card.html?mode=light"
+          title="Vêrvarsel for Haram frå Yr"
+          loading="lazy"
+        ></iframe>
+        <div class="forecast-actions">
+          <button class="long-range" type="button" aria-haspopup="dialog" aria-label="Langtidsvarsel for Haram" hidden>
+            Sjå langtidsvarsel <svg class="open-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none">
+              <path d="M17.5 9.5h5v5m0-5-5 5m-3 8h-5v-5m0 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+      <article class="forecast" data-location="1-183493" data-place="Stordal">
+        <iframe
+          src="https://www.yr.no/nn/innhald/1-183493/card.html?mode=light"
+          title="Vêrvarsel for Stordal frå Yr"
+          loading="lazy"
+        ></iframe>
+        <div class="forecast-actions">
+          <button class="long-range" type="button" aria-haspopup="dialog" aria-label="Langtidsvarsel for Stordal" hidden>
+            Sjå langtidsvarsel <svg class="open-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none">
+              <path d="M17.5 9.5h5v5m0-5-5 5m-3 8h-5v-5m0 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+      <article class="forecast" data-location="1-189202" data-place="Skodje">
+        <iframe
+          src="https://www.yr.no/nn/innhald/1-189202/card.html?mode=light"
+          title="Vêrvarsel for Skodje frå Yr"
+          loading="lazy"
+        ></iframe>
+        <div class="forecast-actions">
+          <button class="long-range" type="button" aria-haspopup="dialog" aria-label="Langtidsvarsel for Skodje" hidden>
+            Sjå langtidsvarsel <svg class="open-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none">
+              <path d="M17.5 9.5h5v5m0-5-5 5m-3 8h-5v-5m0 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+      <article class="forecast" data-location="1-2849264" data-place="Ørskog">
+        <iframe
+          src="https://www.yr.no/nn/innhald/1-2849264/card.html?mode=light"
+          title="Vêrvarsel for Ørskog frå Yr"
+          loading="lazy"
+        ></iframe>
+        <div class="forecast-actions">
+          <button class="long-range" type="button" aria-haspopup="dialog" aria-label="Langtidsvarsel for Ørskog" hidden>
+            Sjå langtidsvarsel <svg class="open-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none">
+              <path d="M17.5 9.5h5v5m0-5-5 5m-3 8h-5v-5m0 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+    </div>
+    <footer class="source-bar">Vêrvarsel frå <a href="https://www.yr.no/nn" target="_blank" rel="noopener">Yr</a>.</footer>
+  </main>
+
+  <dialog id="forecast-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <header class="dialog-header">
+      <div>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description">Langtidsvarsel frå Yr</p>
+      </div>
+      <button class="close-button" type="button" aria-label="Lukk langtidsvarselet" autofocus>×</button>
+    </header>
+    <iframe id="long-forecast" title="Langtidsvarsel frå Yr"></iframe>
+    <div class="dialog-actions">
+      <a id="yr-link" target="_blank" rel="noopener">Sjå meir på Yr</a>
+    </div>
+  </dialog>
+</body>
+</html>
